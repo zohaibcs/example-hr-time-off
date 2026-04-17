@@ -3,5 +3,6 @@
 /coverage
 *.sqlite
 /data
+/demo
 .env
 npm-debug.log*

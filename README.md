@@ -13,6 +13,11 @@ Copy `.env.example` to `.env` and set:
 - `DATABASE_PATH` — SQLite file path (default `data/timeoff.sqlite`; parent directory is created at startup).
 - `HCM_BASE_URL` — base URL of the HCM realtime API (validate, submit, balance read).
 
+## Demo data and browser UI (optional)
+
+- **`demo/`** — seed JSON, standalone HCM mock (`npm run demo:hcm`), and batch seeder (`npm run demo:seed`). Delete the whole `demo/` folder anytime; see `demo/DELETE-THIS-FOLDER.txt`.
+- **Browser UI** — lives under `D:\ExampleHRToolExtra\ui` (see `HOWTO.txt` there). Requires CORS (enabled in `main.ts`) and `.env` with `HCM_BASE_URL` pointing at the mock.
+
 ## Scripts
 
 ```bash
@@ -20,6 +25,8 @@ npm install
 npm run start:dev
 npm run build
 npm run start:prod
+# optional: terminal A — npm run demo:hcm   |  terminal B — npm run start:dev
+# optional: npm run demo:seed  (with API up — loads demo/seed-payload.json)
 ```
 
 ## Tests and coverage
